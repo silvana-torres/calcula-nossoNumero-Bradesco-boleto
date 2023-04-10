@@ -1,0 +1,31 @@
+<po-page-default p-title="PO UI">
+  <p>Teste de geração de nossoNumero Bradesco</p>
+  <br />
+
+  <form [formGroup]="form">
+    <po-input
+      p-label="Carteira"
+      class="po-sm-2 po-md-2"
+      [p-maxlength]="2"
+      formControlName="carteira"
+    >
+    </po-input>
+    <po-input
+      p-label="Nosso número"
+      class="po-sm-8 po-md-8"
+      [p-maxlength]="11"
+      formControlName="nossoNumero"
+    >
+    </po-input>
+    <po-input
+      p-label="Dígito"
+      class="po-sm-2 po-md-2"
+      [p-maxlength]="11"
+      formControlName="digito"
+      [p-disabled]="true"
+    >
+    </po-input>
+
+    <po-button p-label="Calcular dígito" (p-click)="onClick()"> </po-button>
+  </form>
+</po-page-default>
